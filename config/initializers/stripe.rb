@@ -1,1 +1,1 @@
-Stripe.api_key = 'sk_test_RDVlc5zF2993aFIouvLrP5Uv00BRZHNyo0'
+Stripe.api_key = "sk_test_adFXZwnnMXzTBXfbdP1f52rc"

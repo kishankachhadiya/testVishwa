@@ -1,0 +1,51 @@
+<div class="justify-content-center">
+  <h2>Sellers</h2>
+
+  <table class="table table-hover mb-0" role="datatable" data-source="<%= sellers_jobs_path(format: 'json') %>">
+    <thead>
+    <tr><th>Image</th>
+      <th>task_title</th>
+      <th>Price</th>
+      <th>action</th>
+    </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+
+
+
+  <%#= link_to(" ADD NEW JOB", new_sellers_job_path) %>
+
+<!--  <table class="table">-->
+<!--    <tr>-->
+<!--      <th>Task Title</th>-->
+<!--      <th>Payment Type</th>-->
+<!--      <th>Price</th>-->
+<!--      <th>Job_description</th>-->
+<!--      <th>Experience</th>-->
+<!--      <th>Actions</th>-->
+<!--    </tr>-->
+
+    <%# @jobs.each do |job| %>
+<!--      <tr>-->
+<!--        <td><%#= job.task_title %></td>-->
+<!--        <td><%#= job.payment_type %></td>-->
+<!--        <td><%#= job.price %></td>-->
+<!--        <td><%#= job.job_description %></td>-->
+<!--        <td><%#= job.experience %></td>-->
+<!--        <td>-->
+          <%#= link_to("SHOW", sellers_job_path(job.id), :class => 'action show') %>
+<!--        </td>-->
+<!--        <td>-->
+          <%#= link_to("EDIT", edit_sellers_job_path(job.id), :class => 'action edit') %>
+<!--        </td>-->
+<!--        <td>-->
+          <%#= link_to("DELETE",sellers_job_path(job.id),:method => 'delete', :class => 'action edit') %>
+<!--        </td>-->
+<!--      </tr>-->
+    <%# end %>
+<!--  </table>-->
+</div>
+
+

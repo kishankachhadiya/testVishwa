@@ -1,0 +1,95 @@
+
+<%=  link_to "<<<Back To List>>>" , buyers_homes_path %>
+
+
+<div>
+  <h2>List</h2>
+  <table class="table">
+
+    <tr>
+      <th>Task Title</th>
+      <td><%= @job.task_title %></td>
+    </tr>
+
+    <tr>
+      <th>Category</th>
+      <td><%= @job.category.name %></td>
+    </tr>
+
+    <tr>
+      <th>Payment Type</th>
+      <td><%= @job.payment_type %></td>
+    </tr>
+
+    <tr>
+      <th>Subscription Name</th>
+      <td><%= @job.subscription_name %></td>
+    </tr>
+
+    <tr>
+      <th>Price</th>
+      <td><%=number_to_currency(@job.price) %></td>
+    </tr>
+
+    <tr>
+      <th>Description</th>
+      <td><%= @job.description %></td>
+    </tr>
+
+    <tr>
+      <th>Job description</th>
+      <td><%= @job.job_description %></td>
+    </tr>
+
+    <tr>
+      <th>Instrument</th>
+      <td><%= @job.instrument %></td>
+    </tr>
+
+    <tr>
+      <th>Instrument </th>
+      <td><%= @job.instrument %></td>
+    </tr>
+
+    <tr>
+      <th>Equipment </th>
+      <td><%= @job.equipment %></td>
+    </tr>
+
+    <tr>
+      <th>Experience </th>
+      <td><%= @job.experience %></td>
+    </tr>
+
+    <tr>
+      <th>Instruction To Buyer </th>
+      <td><%= @job.instruction_to_buyer %></td>
+    </tr>
+
+    <tr>
+      <th>Availability </th>
+      <td><%= @job.availability %></td>
+    </tr>
+
+    <tr>
+      <th>Availability Time </th>
+      <td><%= @job.from_availability_time&.strftime("%I:%M%p") %>-- TO --<%= @job.to_availability_time&.strftime("%I:%M%p") %></td>
+    </tr>
+
+    <tr>
+      <th>Location </th>
+      <td><%= @job.location %></td>
+    </tr>
+
+    <tr>
+      <th>Video Link </th>
+      <td><%= @job.video_link %></td>
+    </tr>
+
+    <tr>
+      <th>Tags </th>
+      <td><%= @job.tags %></td>
+    </tr>
+
+  </table>
+</div>

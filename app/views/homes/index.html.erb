@@ -1,0 +1,47 @@
+
+
+<div class="justify-content-center">
+  <h2>Welcome to our websites </h2>
+
+
+
+  <%#= link_to(" ADD NEW JOB", new_sellers_job_path) %>
+
+<!--  <table class="table">-->
+<!--    <tr>-->
+<!--      <th>Task Title</th>-->
+<!--      <th>Payment Type</th>-->
+<!--      <th>Price</th>-->
+<!--      <th>Job_description</th>-->
+<!--      <th>Experience</th>-->
+<!--      <th>Actions</th>-->
+<!--    </tr>-->
+
+    <%# @jobs.each do |job| %>
+<!--      <tr>-->
+<!--        <td><%#= job.task_title %></td>-->
+<!--        <td><%#= job.payment_type %></td>-->
+<!--        <td><%#= job.price %></td>-->
+<!--        <td><%#= job.job_description %></td>-->
+<!--        <td><%#= job.experience %></td>-->
+<!--        <td>-->
+          <%#= link_to("SHOW", sellers_job_path(job.id), :class => 'action show') %>
+<!--        </td>-->
+<!--        <td>-->
+          <%#= link_to("EDIT", edit_sellers_job_path(job.id), :class => 'action edit') %>
+<!--        </td>-->
+<!--        <td>-->
+          <%#= link_to("DELETE",sellers_job_path(job.id), :class => 'action edit') %>
+<!--        </td>-->
+<!--      </tr>-->
+    <%# end %>
+<!--  </table>-->
+</div>
+
+
+<% if current_user %>
+  <li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
+<% else %>
+  <li><%= link_to "Sign up", new_user_registration_path %></li>
+<% end %>
+

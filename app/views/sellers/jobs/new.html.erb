@@ -1,0 +1,16 @@
+<div class="text-light">
+  <%= link_to "<<<Back To List>>>", sellers_jobs_path %>
+</div>
+
+<div>
+  <h2 class="text-danger"> Jobs</h2>
+  <%= form_for(:job, :url => sellers_jobs_path, :method => 'post') do |f| %>
+    <%= render(:partial => "form", locals: { :f => f }) %>
+
+    <div class="form-button">
+      <%= submit_tag("Submit") %>
+    </div>
+
+  <% end %>
+
+</div>

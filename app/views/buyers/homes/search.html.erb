@@ -1,0 +1,22 @@
+<div>
+
+  <h1>Search Result</h1>
+
+  <table class="table">
+
+    <% @results.each do |result| %>
+      <!--      <%# result.task_title %></br>-->
+
+      <tr>
+        <td>Task title</td>
+        <td><%= result.task_title %></td>
+      </tr>
+
+      <tr>
+        <td>Categories </td>
+        <td><%= result.category_id %></td>
+      </tr>
+    <% end %>
+  </table>
+
+</div>

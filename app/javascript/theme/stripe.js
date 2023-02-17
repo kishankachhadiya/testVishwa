@@ -1,7 +1,6 @@
-var stripe = Stripe('pk_test_dpJ3KJruvGl9HMItdlLYGr1100G7LgOer2');
+var stripe = Stripe("pk_test_6Dh63tpy49oNcyb2rZDYKnUA");
 
-$( document ).on('turbolinks:load', function() {
-
+$(document).on('turbolinks:load', function () {
     var elements = stripe.elements();
 
     var style = {
@@ -12,18 +11,18 @@ $( document ).on('turbolinks:load', function() {
         },
     };
 
-// Create an instance of the card Element.
+    // Create an instance of the card Element.
     var card = elements.create('card', {style: style});
 
-// Add an instance of the card Element into the `card-element` <div>.
+
+    // Add an instance of the card Element into the `card-element` <div>.
     card.mount('#card-element');
 
-
     var form = document.getElementById('payment-form');
-    form.addEventListener('submit', function(event) {
+    form.addEventListener('submit', function (event) {
         event.preventDefault();
 
-        stripe.createToken(card).then(function(result) {
+        stripe.createToken(card).then(function (result) {
             if (result.error) {
                 // Inform the customer that there was an error.
                 var errorElement = document.getElementById('card-errors');
@@ -35,18 +34,17 @@ $( document ).on('turbolinks:load', function() {
         });
     });
 
+    function stripeTokenHandler(token) {
+        // Insert the token ID into the form so it gets submitted to the server
+        var form = document.getElementById('payment-form');
+        var hiddenInput = document.createElement('input');
+        hiddenInput.setAttribute('type', 'hidden');
+        hiddenInput.setAttribute('name', 'stripeToken');
+        hiddenInput.setAttribute('value', token.id);
+        form.appendChild(hiddenInput);
 
-        function stripeTokenHandler(token) {
-            // Insert the token ID into the form so it gets submitted to the server
-            var form = document.getElementById('payment-form');
-            var hiddenInput = document.createElement('input');
-            hiddenInput.setAttribute('type', 'hidden');
-            hiddenInput.setAttribute('name', 'stripeToken');
-            hiddenInput.setAttribute('value', token.id);
-            form.appendChild(hiddenInput);
-
-            // Submit the form
-            form.submit();
-        }
-
+        // Submit the form
+        form.submit();
+    }
 });
+

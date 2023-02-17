@@ -1,0 +1,26 @@
+
+
+<div>
+  <h2>Profile</h2>
+
+  <table class="table">
+    <tr>
+      <th>First Name</th>
+      <td><%= @user.firstname %></td>
+    </tr>
+
+    <tr>
+      <th>Last Name</th>
+      <td><%= @user.lastname %></td>
+    </tr>
+
+    <tr>
+      <th>User Type</th>
+      <td><%= @user.usertype %></td>
+    </tr>
+
+  </table>
+
+  <%= link_to "edit   profile" , edit_user_registration_path %>
+
+</div>

@@ -1,0 +1,2 @@
+module Passwords::UsersHelper
+end

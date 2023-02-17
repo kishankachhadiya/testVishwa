@@ -1,0 +1,33 @@
+<div class="justify-content-center">
+
+
+  <table class="table">
+    <tr>
+      <th>Task Title</th>
+      <th>Payment Type</th>
+      <th>Price</th>
+      <th>Job_description</th>
+      <th>Experience</th>
+      <th>Action</th>
+      <th>Payment</th>
+    </tr>
+
+    <% @jobs.each do |job| %>
+      <tr>
+        <td><%= job.task_title %></td>
+        <td><%= job.payment_type %></td>
+        <td><%= number_to_currency(job.price) %></td>
+        <td><%= job.job_description %></td>
+        <td><%= job.experience %></td>
+        <td>
+          <%= link_to("SHOW", buyers_home_path(job.id), :class => 'action show') %>
+        </td>
+        <td>
+          <%= link_to "Buy Now", new_buyers_checkout_path(id: job.id) %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+  <%== pagy_bootstrap_nav(@pagy) %>
+</div>
+

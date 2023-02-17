@@ -1,0 +1,18 @@
+
+
+<%= link_to("<<BACK TO LIST>>>", sellers_jobs_path ) %>
+
+
+<div>
+  <h2 class="text-danger"> Jobs</h2>
+
+  <%= form_for(:job, :url => sellers_job_path, :method => 'put') do |f| %>
+    <%= render(:partial => "form" , locals:{:f => f}) %>
+
+    <div class="form-button">
+      <%= submit_tag("Submit") %>
+    </div>
+
+  <% end %>
+
+</div>

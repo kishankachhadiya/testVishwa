@@ -1,0 +1,102 @@
+
+<table>
+
+  <tr>
+    <th><%= f.label(:task_title)%></th>
+    <td><%= f.text_field(:task_title) %></td>
+  </tr>
+
+  <tr>
+    <th><%= f.label(:category_id )%></th>
+    <td><%= f.text_field(:category_id) %></td>
+  </tr>
+
+  <tr>
+    <th><%= f.label(:payment_type )%></th>
+    <td>
+      <%= f.radio_button(:payment_type , 'price_per_hour') %> Price Per Hour
+      <%= f.radio_button(:payment_type , 'fixed_price') %>Fixed Price
+    </td>
+  </tr>
+
+  <tr>
+    <th><%= f.label(:subscription_name )%></th>
+    <td><%= f.text_field(:subscription_name) %></td>
+  </tr>
+
+  <tr>
+    <th><%= f.label(:price )%></th>
+    <td><%= f.number_field(:price) %></td>
+  </tr>
+
+  <tr>
+    <th><%= f.label(:description )%></th>
+    <td><%= f.text_field(:description) %></td>
+  </tr>
+
+  <tr>
+    <th><%= f.label(:job_description )%></th>
+    <td><%= f.text_area(:job_description, :size=>'40x10') %></td>
+  </tr>
+
+  <tr>
+    <th><%= f.label(:instrument )%></th>
+    <td><%= f.text_field(:instrument) %></td>
+  </tr>
+
+  <tr>
+    <th><%= f.label(:influences )%></th>
+    <td><%= f.text_field(:influences) %></td>
+  </tr>
+
+  <tr>
+    <th><%= f.label(:equipment )%></th>
+    <td><%= f.text_field(:equipment) %></td>
+  </tr>
+
+  <tr>
+    <th><%= f.label(:experience )%></th>
+    <td><%= f.text_field(:experience) %></td>
+  </tr>
+
+  <tr>
+    <th><%= f.label(:instruction_to_buyer ,"instruction to buyer")%></th>
+    <td><%= f.text_area(:instruction_to_buyer, :size=>'40x10') %></td>
+  </tr>
+
+  <tr>
+    <th><%= f.label(:availability )%></th>
+    <td><%= f.date_field(:availability) %></td>
+  </tr>
+
+  <tr>
+    <th><%= f.label(:from_availability_time,"Time" )%></th>
+    <td><%= f.time_field(:from_availability_time) %></td>
+  </tr>
+
+  <tr>
+    <th><%= f.label(:to_availability_time,"To" )%></th>
+    <td><%= f.time_field(:to_availability_time) %></td>
+  </tr>
+
+  <tr>
+    <th><%= f.label(:location )%></th>
+    <td><%= f.text_field(:location) %></td>
+  </tr>
+
+  <tr>
+    <th><%= f.label(:video_link,"Video link" )%></th>
+    <td><%= f.text_field(:video_link) %></td>
+  </tr>
+
+  <tr>
+    <th><label>Image</label></th>
+    <td><%= f.file_field(:image) %></td>
+  </tr>
+
+  <tr>
+    <th><label>Images</label></th>
+    <td><%= f.file_field(:images , multiple: true) %></td>
+  </tr>
+
+</table>

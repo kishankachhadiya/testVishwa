@@ -1,0 +1,2 @@
+module Buyers::HomesHelper
+end
